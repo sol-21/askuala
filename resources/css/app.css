@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+html,
+body,
+:root {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+@layer base {
+    :root {
+        --scrollbar-color: rgb(87, 205, 87);
+    }
+}
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: rgb(245, 242, 242);
+}
+@media (prefers-color-scheme: dark) {
+    ::-webkit-scrollbar-track {
+        background: rgb(16, 16, 47);
+    }
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-color);
+
+    /* border-radius: 5px; */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(87, 205, 60);
+}
